@@ -1,0 +1,27 @@
+clc;
+clear all;
+close all;
+% formulae
+x=input('enter the sequence');
+N1=length(x);
+for k=0:1:N1-1
+    q(k+1)=0;
+    for n=0:1:N1-1
+        q(k+1)=q(k+1)+x(n+1)*exp(j*2*pi*k*n/N1);
+    end
+end
+subplot(3,2,1);
+stem(x);
+xlabel('n');
+ylabel('x(n)');
+title('title sequence');
+subplot(3,2,2);
+stem(real(q));
+xlabel('k');
+ylabel('rp(x(k))');
+title('R.P. of DFT using formula');
+subplot(3,2,3);
+stem(imag(q));
+xlabel('k');
+ylabel('imag(x(k)');
+title('I.P. of DFT using formula');

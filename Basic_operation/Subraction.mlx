@@ -1,0 +1,12 @@
+% Subraction
+
+clc;
+clear;
+close all;
+
+n1 = -2:1;
+a = min(n1);
+b = max(n1);
+x = [1 2 3 4];
+subplot(3,1,1);
+stem(n1, x);

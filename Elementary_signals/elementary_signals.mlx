@@ -1,0 +1,72 @@
+clc; 
+clear;
+close all;
+
+% Unit Step Sequence
+
+n1 = 0:1:10; % Time axis for 10 time units
+amp1 = [1 1 1 1 1 1 1 1 1 1 1];
+subplot(3,2,1);
+stem(n1, amp1);
+xlabel('n1');
+ylabel('amp1');
+title('Unit step sequence');
+
+
+% Unit Impulse Sequence
+
+n2 = -5:1:5; % Time axis for 10 time units
+amp2 = [0 0 0 0 0 1 0 0 0 0 0];
+subplot(3,2,2);
+stem(n2, amp2);
+xlabel('n2');
+ylabel('amp2');
+title('Unit Impulse sequence');
+
+
+% Unit Ramp Sequence
+
+n3 = 0:1:10; % Time axis for 10 time units
+amp3 =[0 1 2 3 4 5 6 7 8 9 10];
+subplot(3,2,3);
+stem(n3, amp3);
+xlabel('n3');
+ylabel('amp3');
+title('Unit Ramp sequence');
+
+
+% Exponential Sequence 
+
+n4 = 0:1:10; % Time axis for 10 time units
+amp4 = exp(n4);
+subplot(3,2,4);
+stem(n4, amp4);
+xlabel('n4');
+ylabel('amp4');
+title('Unit Exponential sequence');
+
+% Sinusoidal Sequence
+
+n5 = 0:0.2:10; % Time axis for 10 time units
+amp5 = sin(n5);
+subplot(3,2,5);
+stem(n5, amp5);
+xlabel('n5');
+ylabel('amp5');
+title('Sinusoidal sequence');
+
+
+% Cosine Sequence
+
+n6 = 0:0.2:10; % Time axis for 10 time units
+amp6 = cos(n6);
+subplot(3,2,6);
+stem(n6, amp6);
+xlabel('n6');
+ylabel('amp6');
+title('Cosine sequence');
+
+
+
+
+
